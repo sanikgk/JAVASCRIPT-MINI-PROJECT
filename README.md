@@ -1,108 +1,53 @@
-# JAVASCRIPT-MINI-PROJECT
+# 🔢 Multiplication Table Generator
 
-<!DOCTYPE html>
-<html lang="en">
+The **Multiplication Table Generator** is a simple and interactive web application built using HTML, CSS, and JavaScript.  
+It allows users to select a number and instantly generate its multiplication table in a clean and visually appealing layout.
 
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title> Multiplication Table Generator </title>
+---
 
-<style>
-    body {
-    padding: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-image: url("/background_img.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
+## 🚀 Features
 
-    .box {
-    padding: 40px;
-    max-width: 560px;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    background: linear-gradient(to right, #3a9bfb, hsl(180, 76%, 50%));
-    }
+- Dropdown selection from numbers **1 to 20**
+- Generates multiplication table from **0 to 10**
+- Interactive **Generate Table** button
+- Styled UI with gradient background and soft shadows
+- Responsive and centered layout
 
-    h2 {
-    margin-top: 0;
-    color: #000205;
-    }
+---
 
-    select, button {
-    padding: 10px;
-    font-size: 20px;
-    margin-top: 10px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid hsl(220, 84%, 48%);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+## 🛠️ Technologies Used
 
-    button {
-    color: rgb(15, 3, 67);
-    border: none;
-    cursor: pointer;
-    margin-top: 12px;
-    background: linear-gradient(to right, #6af197, #f2ff04);
-    }
+- **HTML** – Structure of the webpage  
+- **CSS** – Styling, gradients, and layout design  
+- **JavaScript** – Logic for generating multiplication tables dynamically  
 
-    ul {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 16px;
-    }
+---
 
-    li {
-    background: #f1f5f9;
-    margin: 7px 0;
-    padding: 10px;
-    border-radius: 8px;
-    }
-</style>
+## 📂 How It Works
 
-</head>
+1. The dropdown menu is dynamically populated with numbers from **1 to 20** using JavaScript.
+2. When the user clicks the **Generate Table** button:
+   - The selected number is captured.
+   - The multiplication table (0–10) is generated.
+   - Results are displayed as a styled list.
+3. The table is automatically generated for the default selected number when the page loads.
 
-<body>
-<div class="box">
-    <h2> Multiplication Table Generator </h2>
+---
 
-    <label for="numSelect">Choose a number</label>
-    
-    <select id="numSelect"></select>
+## 🎯 Purpose of the Project
 
-    <button id="btnGenerate">Generate Table</button>
+This project helps in understanding:
 
-    <ul id="result"></ul>
-</div>
+- DOM Manipulation  
+- Event Handling in JavaScript  
+- Loops and Dynamic Content Rendering  
+- Basic UI Styling with CSS  
 
-<script>
-let select = document.getElementById("numSelect");
-let result = document.getElementById("result");
-let button = document.getElementById("btnGenerate");
+---
 
-for (let i = 1; i <= 20; i++) {
-select.innerHTML += `<option value="${i}">${i}</option>`;
-}
+## 📌 How to Run
 
-function generateMultiplicationTable() {
-let number = Number(select.value);
-result.innerHTML = "";
-
-for (let i = 0; i <= 10; i++) {
-result.innerHTML += `<li>${number} × ${i} = ${number * i}</li>`;
-}
-}
-
-button.addEventListener("click", generateMultiplicationTable);
-
-generateMultiplicationTable();  
-</script>
-
-</body>
-</html>
-
-
+1. Download or clone the repository.
+2. Open the HTML file in any web browser.
+3. Select a number.
+4. Click **Generate Table** to see the result.
